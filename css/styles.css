@@ -1,5 +1,18 @@
+:root {
+    --body-pink: rgb(246, 210, 216);
+    --nav-pink: rgb(240, 97, 121);
+    --nav-white: rgb(255, 255, 255);
+    --h1-black: rgb(51, 51, 51);
+    --p-gray: rgb(85, 85, 85);
+}
+
+body {
+    background-color: var(--body-pink);
+}
+
 img {
-    width: 50vw;
+    width: 60vw;
+    height: 12vh;
 }
 
 .center-logo {
@@ -16,10 +29,11 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 2rem;
+    margin: 1rem 2rem;
 }
 
 nav ul li a {
+    color: var(--nav-pink);
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
@@ -27,40 +41,36 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: var(--nav-pink);
+    color: var(--nav-white);
     border-radius: 0.5rem;
-    color: white;
 }
 
 main {
-    padding: 0 20px;
+    padding: 0 1.5rem;
 }
 
 .promo-banner {
-    background-color: #f0f0f0;
     text-align: center;
     padding: 50px 20px;
 }
 
 .promo-banner h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: var(--h1-black);
 }
 
 .promo-banner p {
+    max-width: 100%;
     font-size: 1.2rem;
-    color: #666;
-}
-
-.collections {
-    margin-top: 2.5rem;
-    background-color: #eee;
+    color: var(--p-gray);
 }
 
 .collections h2 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .row {
@@ -77,7 +87,53 @@ main {
 
 .column img {
     width: 100%;
-    height: 50%;
+    height: 60%;
     border-radius: 0.5rem;
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem;
+    padding: 1.5rem;
+}
+
+.footer-left img {
+    max-width: 15rem;
+}
+
+.footer-right p {
+    font-size: 1rem;
+    color: var(--p-gray);
+}
+
+@media (max-width: 768px) {
+    img {
+    width: 80vw;
+    height: 10vh;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .column img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-left img {
+        margin: 1rem 0 1.5rem 0;
+        max-width: 70vw;
+    }
+}
