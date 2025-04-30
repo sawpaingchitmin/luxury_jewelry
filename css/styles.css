@@ -46,8 +46,14 @@ nav ul li a:hover {
     border-radius: 0.5rem;
 }
 
+nav ul li a.active {
+    background-color: var(--nav-pink);
+    color: var(--nav-white);
+    border-radius: 0.5rem;
+}
+
 main {
-    padding: 0 1.5rem;
+    padding: 1.5rem;
 }
 
 .promo-banner {
@@ -108,6 +114,70 @@ footer {
     color: var(--p-gray);
 }
 
+.project-link {
+    font-size: 1rem;
+    color: var(--h1-black);
+    margin: 1rem 0;
+}
+
+.project-link a {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+}   
+
+.project-link a:hover {
+    text-decoration: underline;
+}
+
+/* About Section & Contact Section */
+.about-section, .contact-section {
+    background-color: var(--nav-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-section h1, .contact-section h1 {
+    font-size: 2rem;
+    color: var(--h1-black);
+    margin-bottom: 1.5rem;
+}
+
+.about-section p, .contact-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+.contact-section button {
+    width: fit-content;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    color: var(--nav-white);
+    background-color: var(--nav-pink);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: rgb(249, 119, 141);
+}
+
 @media (max-width: 768px) {
     img {
     width: 80vw;
@@ -135,5 +205,9 @@ footer {
     .footer-left img {
         margin: 1rem 0 1.5rem 0;
         max-width: 70vw;
+    }
+
+    .contact-section button {
+        width: 100%;
     }
 }
