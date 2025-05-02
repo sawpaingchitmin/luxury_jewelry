@@ -1,16 +1,32 @@
 :root {
+    /* Define colors for whole website */
     --body-pink: rgb(246, 210, 216);
     --nav-pink: rgb(240, 97, 121);
+    --button-pink: rgb(249, 119, 141);
     --nav-white: rgb(255, 255, 255);
     --h1-black: rgb(51, 51, 51);
     --p-gray: rgb(85, 85, 85);
+    --github-blue: rgb(3, 102, 214);
+    --input-light-gray: rgb(204, 204, 204);
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Make header, main, footer go from top to bottom */
+}
+
+html {
+    scroll-behavior: smooth;    /* Smooth scroll when clicking anchor links */
+}   
 
 body {
     background-color: var(--body-pink);
 }
 
-img {
+header img {
     width: 60vw;
     height: 12vh;
 }
@@ -18,13 +34,13 @@ img {
 .center-logo {
     padding-top: 1rem;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the logo */
 }
 
 nav ul {
     display: flex;
     list-style-type: none;
-    justify-content: center;
+    justify-content: center;     /* Center nav links */
     padding: 1rem 0;
 }
 
@@ -46,6 +62,7 @@ nav ul li a:hover {
     border-radius: 0.5rem;
 }
 
+/* Highlight current page in nav */
 nav ul li a.active {
     background-color: var(--nav-pink);
     color: var(--nav-white);
@@ -54,6 +71,7 @@ nav ul li a.active {
 
 main {
     padding: 1.5rem;
+    flex: 1;    /* Let main grow and fill page */
 }
 
 .promo-banner {
@@ -103,6 +121,7 @@ footer {
     align-items: center;
     margin: 1.5rem;
     padding: 1.5rem;
+    gap: 1rem;
 }
 
 .footer-left img {
@@ -121,7 +140,7 @@ footer {
 }
 
 .project-link a {
-    color: #0366d6;
+    color: var(--github-blue);
     text-decoration: none;
     font-weight: bold;
 }   
@@ -130,7 +149,8 @@ footer {
     text-decoration: underline;
 }
 
-/* About Section & Contact Section */
+
+/* About and Contact page style box */
 .about-section, .contact-section {
     background-color: var(--nav-white);
     padding: 2rem;
@@ -149,6 +169,7 @@ footer {
     line-height: 1.8;
 }
 
+/* Style for contact form */
 .contact-section form {
     display: flex;
     flex-direction: column;
@@ -158,7 +179,7 @@ footer {
     width: 100%;
     padding: 0.8rem;
     font-size: 1rem;
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid var(--input-light-gray);
     border-radius: 0.5rem;
     box-sizing: border-box;
 }
@@ -175,9 +196,10 @@ footer {
 }
 
 .contact-section button:hover {
-    background-color: rgb(249, 119, 141);
+    background-color: var(--button-pink);
 }
 
+/* Make layout responsive on mobile phones and tablets */
 @media (max-width: 768px) {
     img {
     width: 80vw;
