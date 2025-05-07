@@ -1,3 +1,6 @@
+## Live Demo
+View the live demonstration of the project here: [Mangata and Gallo Demo](https://sawpaingchitmin.github.io/mangata-and-gallo/)
+
 ## Credits
 
 This project is based on the *[Meta Front-End Developer's HTML and CSS in Depth](https://www.coursera.org/learn/html-and-css-in-depth/supplement/bpM1T/subject-selection)* course.
