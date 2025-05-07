@@ -1,5 +1,5 @@
 ## Live Demo
-View the live demonstration of the project here: [Mangata and Gallo Demo](https://sawpaingchitmin.github.io/mangata-and-gallo/)
+View the live demonstration of the project here: [Mangata and Gallo Website](https://sawpaingchitmin.github.io/mangata-and-gallo/)
 
 ## Credits
 
