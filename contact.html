@@ -34,7 +34,7 @@
             <p>We'd love to hear from you! For questions about our products or orders, feel free to reach out via the form below or visit our Austin storefront.</p>
 
             <!-- Contact form for users to fill out -->
-            <form>
+            <form id="contactForm">
                 <!-- Name input field -->
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
@@ -59,7 +59,7 @@
     </main>
 
     <footer>
-        <div class="footer-left">
+        <div class="footer-left">   
             <!-- Footer logo -->
             <img src="images/logo.png" alt="Mangata & Gallo Logo">
         </div>
@@ -76,5 +76,27 @@
             <p>&copy; 2025 Mangata & Gallo. All rights reserved.</p>
         </div>
     </footer>
+
+    <p id="status"></p>
+
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        const response = await fetch("http://127.0.0.1:8000/api/contact/", {
+            method: "POST",
+            body: formData
+        });
+
+        if (response.ok) {
+            document.getElementById("status").innerText = "Message sent!";
+            this.reset();
+        } else {
+            document.getElementById("status").innerText = "Error sending message.";
+        }
+    });
+    </script>
 </body>
 </html>
